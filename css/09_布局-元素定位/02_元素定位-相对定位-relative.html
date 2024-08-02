@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>元素定位-相对定位-relative</title>
+  <style>
+    .text {
+      /* margin-left: 30px; */
+
+      /* relative: 相对定位 */
+      /* 相对自己的本来的位置，不会脱离标准流 */
+      position: relative;
+      left: -30px;
+      top: -50px;
+      /* bottom: 50px;
+      right: 30px; */
+    }
+  </style>
+</head>
+
+<body>
+  <span>我是span元素</span>
+  <strong class="text">我是strong元素</strong>
+  <img src="https://cdn.pixabay.com/photo/2013/09/03/19/18/tennis-178696_640.jpg" alt="">
+  <div>我是div元素</div>
+</body>
+
+</html>

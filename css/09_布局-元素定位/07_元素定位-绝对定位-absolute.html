@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>元素定位-绝对定位-absolute</title>
+  <style>
+    .container {
+      width: 1000px;
+      height: 800px;
+      background-color: #f00;
+
+      /* position: fixed; */
+      position: relative;
+      top: 0;
+    }
+
+    .box {
+      position: relative;
+
+      width: 600px;
+      height: 400px;
+      background-color: #0f0;
+    }
+
+    strong {
+      /* 脱离标准版 */
+      position: absolute;
+
+      /* 设置的四个值 */
+      /* 在没有祖先元素定位的情况下, 相对于的是谁? 视口 */
+      /* 最近的有定位的祖先元素 */
+      right: 0;
+      top: 0;
+    }
+
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div>哈哈哈啊</div>
+  <div class="container">
+    <div class="box">
+      <span>我是span元素</span>
+      <strong>我是strong元素</strong>
+      <img src="../static/images/gouwujie01.jpg" alt="">
+      <div>我是div元素</div>
+    </div>
+  </div>
+  <div>呵呵呵呵</div>
+</body>
+
+</html>
