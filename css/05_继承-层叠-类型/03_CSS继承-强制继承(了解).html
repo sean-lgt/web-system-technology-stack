@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS继承-强制继承(了解)</title>
+  <style>
+    .box {
+      color: red;
+
+      border: 2px solid purple;
+    }
+
+    .box p {
+      /* 很少用 */
+      border: inherit;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <p>我是p元素</p>
+    <h1>我是h1元素</h1>
+  </div>
+</body>
+
+</html>
