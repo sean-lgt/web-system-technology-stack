@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>考拉布局-边框盒子-巧用margin</title>
+  <link rel="stylesheet" href="../static/css/reset.css">
+  <link rel="stylesheet" href="../static/css/common.css">
+  <style>
+    .kaola-container {
+      width: 1100px;
+      margin: 0 auto;
+    }
+
+    .sport-container {
+      margin-top: 20px;
+      background: orange;
+    }
+
+    .sport-container .item {
+      float: left;
+      height: 541px;
+    }
+
+    .sport-container .item.left {
+      width: 330px;
+      background-color: purple;
+    }
+
+    .sport-container .item.center {
+      width: 550px;
+    }
+
+    .sport-container .center .center-item {
+      float: left;
+      width: 275px;
+      height: 271px;
+      box-sizing: border-box;
+      border: 1px solid #000;
+      border-left: none;
+    }
+
+    .sport-container .center .center-item:nth-last-child(-n+2) {
+      margin-top: -1px;
+    }
+
+    .sport-container .item.right {
+      width: 220px;
+    }
+
+    .sport-container .right .item {
+      float: left;
+      width: 220px;
+      height: 121px;
+      box-sizing: border-box;
+      border: 1px solid #000;
+      border-left: none;
+      margin-top: -1px;
+    }
+
+    .sport-container .right .item.header {
+      height: 61px;
+      margin-top: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="kaola-container sport-container clear-fix">
+    <div class="item left"></div>
+    <div class="item center">
+      <div class="center-item">1</div>
+      <div class="center-item">2</div>
+      <div class="center-item">3</div>
+      <div class="center-item">4</div>
+    </div>
+    <div class="item right">
+      <div class="item header">header</div>
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+    </div>
+  </div>
+</body>
+
+</html>
