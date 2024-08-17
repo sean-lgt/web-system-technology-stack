@@ -1,0 +1,25 @@
+body {
+  font: 12px Arial, Helvetica, sans-serif;
+}
+
+.top-header-container {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.top-header-sprite {
+  display: inline-block;
+  background-image: url(../images/topbar_sprite.png);
+}
+
+.top-header-sprite__hot {
+  width: 28px;
+  height: 19px;
+  background-position: -190px 0px;
+}
+
+.top-header-sprite__search {
+  width: 158px;
+  height: 32px;
+  background-position: 0px -99px;
+}
