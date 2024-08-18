@@ -23,3 +23,187 @@ body {
   height: 32px;
   background-position: 0px -99px;
 }
+
+.banner-container {
+  width: 982px;
+  margin: 0 auto;
+}
+
+.banner-sprite {
+  display: inline-block;
+  background-image: url(../images/banner_sprite.png);
+}
+
+
+.banner-sprite__dot {
+  width: 20px;
+  height: 20px;
+  background-position: 3px -343px;
+}
+
+.banner-sprite__dot-active {
+  width: 20px;
+  height: 20px;
+  background-position: -16px -343px;
+}
+
+.banner-sprite__control-left {
+  width: 37px;
+  height: 63px;
+  background-position: 0 -360px;
+}
+
+.banner-sprite__control-right {
+  width: 37px;
+  height: 63px;
+  background-position: 0 -508px;
+}
+
+.download-sprite {
+  background: url(../images/download_sprite.png);
+}
+
+.download-sprite__download {
+  background-position: 0 -290px;
+}
+
+.main-container {
+  width: 980px;
+  margin: 0 auto;
+}
+
+.main-sprite {
+  display: block;
+  background: url(../images/main_sprite.png);
+}
+
+.main-sprite__user-login {
+  width: 250px;
+  height: 126px;
+}
+
+.main-sprite__user-login-btn {
+  width: 100px;
+  height: 31px;
+  background-position: 0 -195px;
+}
+
+.main-sprite__common-header {
+  background-repeat: no-repeat;
+  background-position: -225px -156px;
+}
+
+.main-sprite__header-more {
+  background-repeat: no-repeat;
+  background-position: 0px -240px;
+}
+
+.main-sprite__disc-item {
+  width: 118px;
+  height: 150px;
+  background-position: -260px 100px;
+  background-repeat: no-repeat;
+}
+
+.main-sprite__disc-left {
+  width: 17px;
+  height: 17px;
+  background-position: -260px -75px;
+}
+
+.main-sprite__rank-play {
+  width: 22px;
+  height: 22px;
+  background-position: -267px -205px;
+  background-repeat: no-repeat;
+}
+
+.main-sprite__rank-favor {
+  width: 22px;
+  height: 22px;
+  background-position: -300px -205px;
+  background-repeat: no-repeat;
+}
+
+.main-sprite__rank-play-icon {
+  background-position: -267px -268px;
+  background-repeat: no-repeat;
+}
+
+.main-sprite__rank-favor-icon {
+  background-position: -297px -268px;
+  background-repeat: no-repeat;
+}
+
+
+.main-sprite__disc-right {
+  width: 17px;
+  height: 17px;
+  background-position: -320px -75px;
+}
+
+.main-left-sprite {
+  display: block;
+  background-image: url('../images/cover_sprite.png');
+}
+
+.main-left-sprite__cover {
+  background-position: 0px 0px;
+}
+
+.main-left-sprite__info {
+  background-position: 0px -537px;
+}
+
+.main-left-sprite__disc-cover {
+  background-position: 0 -570px;
+  background-repeat: no-repeat;
+}
+
+.main-left-sprite__rank-cover {
+  background-position: -145px -57px;
+  background-repeat: no-repeat;
+}
+
+
+.icon-sprite {
+  display: inline-block;
+  background-image: url(../images/icon_sprite.png);
+}
+
+.icon-sprite__music {
+  width: 14px;
+  height: 11px;
+  background-position: 0 -24px;
+}
+
+.icon-sprite__play {
+  width: 16px;
+  height: 17px;
+  background-position: 0px 0px;
+}
+
+
+
+.icon-sprite__disc-play {
+  width: 22px;
+  height: 22px;
+  background-position: 0 -85px;
+  background-repeat: no-repeat;
+}
+
+.iconall-sprite {
+  display: inline-block;
+  background-image: url(../images/iconall_sprite.png);
+}
+
+.iconall-sprite__radio {
+  width: 35px;
+  height: 15px;
+  background-position: -31px -658px;
+}
+
+.iconall-sprite__rank-add {
+  background-position: 2px -698px;
+  background-repeat: no-repeat;
+}
