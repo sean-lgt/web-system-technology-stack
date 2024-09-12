@@ -1,0 +1,114 @@
+.page-top-container {
+  border: 1px solid #f5f5f5;
+}
+
+.top-main-container {
+  width: 980px;
+  margin: 0 auto;
+
+}
+
+.top-main-container.top-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 41px;
+  line-height: 41px;
+}
+
+.top-main-container .top-main-left {
+  display: flex;
+}
+
+.top-main-container .top-main-left .page-logo a {
+  position: relative;
+  z-index: 11;
+  display: block;
+  width: 150px;
+  text-indent: -99999px;
+  background: url(../images/top_logo.png) no-repeat;
+  background-position: center center;
+}
+
+.top-main-container .top-main-left .recommend {
+  position: relative;
+}
+
+.top-main-container .top-main-left .recommend .recommend-ad {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: -150px;
+  display: none;
+}
+
+.top-main-container .top-main-left .recommend:hover .recommend-ad {
+  display: block;
+}
+
+.top-main-container .top-main-right {
+  display: flex;
+}
+
+.top-main-container .top-main-right .right-item a {
+  position: relative;
+  display: block;
+  font-size: 14px;
+  color: #464646;
+}
+
+.top-main-container .top-main-right .right-item a.growth {
+  padding-left: 30px;
+}
+
+.top-main-container .top-main-right .right-item .icon-grow {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 30px;
+  height: 30px;
+  background: url(../images/top_sprite.png) no-repeat;
+  background-position: -30px 0px;
+  margin: auto 0;
+}
+
+.top-main-container .top-main-right a.rank {
+  position: relative;
+  margin-left: 20px;
+  padding-right: 30px;
+}
+
+.top-main-container .top-main-right a.rank::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  background: url(../images/top_sprite.png) no-repeat;
+  background-position: 0 0;
+  opacity: 0.2;
+  transform: rotate(90deg);
+}
+
+.top-main-container .top-main-right .dropdown {
+  position: absolute;
+  z-index: 9;
+  right: 0;
+  top: 41px;
+  display: none;
+}
+
+
+.top-main-container .top-main-right a.rank .dropdown iframe {
+  width: 708px;
+  height: 582px;
+}
+
+.top-main-container .top-main-right a.rank:hover .dropdown {
+  display: block;
+  animation: opacityAnim 400ms ease forwards;
+}

@@ -1,0 +1,76 @@
+/* 项目公共样式 */
+
+body {
+  font: 14px/1.5 "Microsoft YaHei", Tahoma, "simsun", sans-serif;
+  color: #333333;
+  min-width: 1300px;
+}
+
+.page-main-container {
+  background: url(../images/main_bg.jpg) no-repeat;
+  background-position: center top;
+  background-size: 100% auto;
+}
+
+.page-main-container .page-link-container {
+  display: block;
+  width: 1200px;
+  height: 440px;
+  margin: 8px auto 12px;
+}
+
+.main-width-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.nowrap-ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.news-type::before {
+  display: inline-block;
+  width: 32px;
+  height: 16px;
+  margin-right: 2px;
+
+  line-height: 16px;
+  text-align: center;
+  font-size: 12px;
+
+  border: 1px solid #f00;
+  border-radius: 2px;
+}
+
+.news-type__hot::before {
+  content: "热门";
+  color: #ff3636;
+  border-color: #ff3636;
+}
+
+.news-type__notice::before {
+  content: "公告";
+  color: #f4be19;
+  border-color: #f4be19;
+}
+
+.news-type__news::before {
+  content: "新闻";
+  color: #1e96ab;
+  border-color: #1e96ab;
+}
+
+.news-type__match {
+  display: inline-block;
+  width: 52px;
+  height: 23px;
+  margin-right: 12px;
+  border-radius: 10px;
+  line-height: 23px;
+  text-align: center;
+  color: #999;
+  font-size: 12px;
+  background-color: #e3e3e3;
+}

@@ -1,0 +1,62 @@
+.page-rightnav {
+  position: fixed;
+  top: 50%;
+  transform: translate(0, -50%);
+  /* margin-top: -240px; */
+  right: 0;
+  width: 254px;
+  height: 494px;
+  background: url(../images/right_nav_bg.png) no-repeat;
+}
+
+.page-rightnav .rightnav-list {
+  position: relative;
+  left: 60px;
+}
+
+.page-rightnav .rightnav-list .item {
+  width: 117px;
+  height: 38px;
+  background: url(../images/right_all.png) no-repeat;
+}
+
+.page-rightnav .rightnav-list .item a {
+  display: block;
+  height: 100%;
+}
+
+.page-rightnav .rightnav-list .item.code {
+  height: 116px;
+  text-align: center;
+  background-position: 0 -3px;
+}
+
+.page-rightnav .rightnav-list .item.code img {
+  width: 111px;
+  height: 110px;
+  margin-top: 3px;
+}
+
+.page-rightnav .rightnav-list .item.weibo {
+  background-position: -122px -120px;
+}
+
+.page-rightnav .rightnav-list .item.weibo:hover {
+  background-position: -122px -240px;
+}
+
+.page-rightnav .rightnav-list .item.gzh {
+  background-position: -122px -160px;
+}
+
+.page-rightnav .rightnav-list .item.gzh:hover {
+  background-position: -122px -200px;
+}
+
+.page-rightnav .rightnav-list .item.sph {
+  background-position: -122px 0;
+}
+
+.page-rightnav .rightnav-list .item.sph:hover {
+  background-position: -122px -42px;
+}

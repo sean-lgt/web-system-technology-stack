@@ -1,0 +1,58 @@
+.page-footer-container {
+  box-sizing: border-box;
+  padding: 60px 0px;
+  background: #232323;
+}
+
+.footer-content-wrap {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-content-wrap .footer-group {
+  display: flex;
+}
+
+.footer-content-wrap .footer-group .footer-item {
+  margin-right: 50px;
+}
+
+.footer-content-wrap .footer-group .footer-item-head {
+  padding: 15px 0;
+  font-weight: 600;
+  font-size: 14px;
+  color: #ffffff;
+
+}
+
+.footer-content-wrap .footer-group .footer-item a {
+  display: block;
+  margin-bottom: 9px;
+  font-size: 12px;
+  color: #8F8F8F;
+}
+
+.footer-content-wrap .footer-detail {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.footer-content-wrap .footer-detail .logo {
+  display: block;
+  width: 257px;
+  height: 47px;
+  background-image: url(https://g-game-1317274415.cos.ap-guangzhou.myqcloud.com/ieg/img-pc/logo.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-bottom: 24px;
+}
+
+.footer-content-wrap .footer-detail .footer-detail-item {
+  margin-bottom: 4px;
+  font-size: 12px;
+  color: #8F8F8F;
+}

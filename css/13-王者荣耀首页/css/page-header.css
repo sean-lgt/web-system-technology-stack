@@ -1,0 +1,158 @@
+.page-header-container {
+  position: relative;
+  background: rgba(0, 0, 0, .8);
+}
+
+.header-main-container {
+  width: 1300px;
+  margin: 0 auto;
+}
+
+.header-main {
+  display: flex;
+  justify-content: space-between;
+  height: 84px;
+}
+
+.header-main .header-left {
+  display: flex;
+}
+
+.header-main .header-left .header-logo a {
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+  display: block;
+  width: 200px;
+  height: 54px;
+  text-indent: -9999px;
+  background: url(../images/logo.png) no-repeat center center;
+}
+
+.header-main .header-left .nav-list {
+  display: flex;
+  margin-left: 30px;
+}
+
+.header-left .nav-list .nav-item {
+  width: 110px;
+  padding-right: 5px;
+}
+
+.header-left .nav-list .nav-item:hover,
+.header-left .nav-list .nav-item.active {
+  background: url(../images/main_sprite.png) no-repeat 0 0;
+}
+
+.header-left .nav-list .nav-item a {
+  display: block;
+  height: 100%;
+  box-sizing: border-box;
+  padding-top: 20px;
+  font-size: 18px;
+  color: #c9c9dd;
+  text-align: center;
+}
+
+.header-left .nav-list .nav-item:hover a,
+.header-left .nav-list .nav-item.active a {
+  color: #e4b653;
+}
+
+.header-left .nav-list .nav-item a .desc {
+  display: block;
+  margin-top: 8px;
+  font-size: 12px;
+  color: #858792;
+}
+
+.header-left .nav-list .nav-item:hover .desc,
+.header-left .nav-list .nav-item.active .desc {
+  color: #91763f;
+}
+
+.header-left .search {
+  margin-left: 10px;
+}
+
+.header-left .search a {
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+  display: block;
+  width: 27px;
+  height: 26px;
+  background: url(../images/nav_search.png);
+}
+
+.header-main .header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-main .header-right .image img {
+  border: 1px solid #d9ad50;
+  border-radius: 50%;
+}
+
+.header-main .header-right .info {
+  margin-left: 12px;
+}
+
+.header-main .header-right .info a {
+  color: #fff;
+}
+
+.header-main .header-right .info p {
+  font-size: 14px;
+  color: #858792;
+  margin-top: 5px;
+}
+
+
+.page-header-container .dropmenu {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 84px;
+  height: 0;
+  background-color: rgba(0, 0, 0, .7);
+  transition: height 300ms ease-in;
+  overflow: hidden;
+}
+
+.page-header-container:hover .dropmenu {
+  height: 285px;
+}
+
+.page-header-container .dropmenu .inner {
+  display: flex;
+  margin: 0 auto;
+  width: 940px;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 15px 0 30px 50px;
+}
+
+.page-header-container .dropmenu .list {
+  width: 115px;
+  padding-top: 5px;
+  text-align: center;
+}
+
+.page-header-container .dropmenu .list .item {
+  height: 30px;
+  line-height: 30px;
+}
+
+.page-header-container .dropmenu .list .item a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #c9c9dd;
+}
+
+.page-header-container .dropmenu .list .item a:hover {
+  color: #f3c258;
+  text-decoration: underline;
+}

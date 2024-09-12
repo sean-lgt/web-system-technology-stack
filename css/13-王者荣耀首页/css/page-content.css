@@ -1,0 +1,388 @@
+.page-content-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  padding-bottom: 30px;
+}
+
+.page-content-container .page-content__left {
+  width: 872px;
+}
+
+.page-content-container .content-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.page-content-container .content-section-header .section-header__left .title {
+  font-size: 22px;
+  color: #323235;
+  padding-left: 30px;
+  background: url(../images/main_sprite.png) no-repeat 0 -102px;
+}
+
+.page-content-container .content-section-header .section-header__left .title.title-icon-match {
+  background-position: 0 -180px;
+}
+
+.page-content-container .content-section-header .section-header__left .title.title-icon-hero {
+  background-position: 0 -139px;
+}
+
+.page-content-container .content-section-header .section-header__right {
+  display: flex;
+  align-items: center;
+}
+
+.page-content-container .content-section-header .section-header__right .more {
+  display: block;
+  padding-left: 22px;
+  background: url(../images/main_sprite.png) no-repeat -252px 4px;
+}
+
+.page-content-container .content-section-header .section-header__right .buy {
+  width: 70px;
+  height: 22px;
+  margin-right: 8px;
+  line-height: 20px;
+  box-sizing: border-box;
+  border: 1px solid #f3c258;
+  border-radius: 3px;
+  text-align: center;
+  text-indent: 20px;
+  background: url(../images/main_sprite.png) no-repeat -243px -85px;
+}
+
+.page-content-container .content-section-header .section-header__right .more:hover {
+  color: #f3c258;
+}
+
+.page-content-container .content-seaction-tabs {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  line-height: 29px;
+  background-color: #f5f5f5;
+}
+
+.page-content-container .content-seaction-tabs>.item {
+  flex: 1;
+  color: #999;
+  text-align: center;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+}
+
+.page-content-container .content-seaction-tabs>.item.item-wrap {
+  flex: 0 auto;
+  flex-grow: 0;
+  padding: 0 27px;
+}
+
+.page-content-container .content-seaction-tabs>.item:hover,
+.page-content-container .content-seaction-tabs>.item.active {
+  color: #333;
+  border-bottom-color: #f3c258;
+}
+
+.page-content-container .content-seaction-tabs>.line {
+  width: 1px;
+  height: 20px;
+  background-color: #e1e1e1;
+}
+
+.page-content-container .content-section-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.content-section-keywords>.item {
+  height: 24px;
+  line-height: 24px;
+  margin: 0 8px 10px 0;
+  padding: 0 15px;
+  color: #333;
+  background-color: #f5f5f5;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.content-section-keywords>.item:hover,
+.content-section-keywords>.item.active {
+  color: #fff;
+  background-color: #f3c258;
+  border-color: #f3c258;
+}
+
+.page-content-container .content-section-videos {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.page-content-container .content-section-videos .video-item-card {
+  display: block;
+  width: 212px;
+  margin-bottom: 20px;
+}
+
+.content-section-videos .video-item-card .album {
+  position: relative;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.content-section-videos .video-item-card .album img {
+  width: 100%;
+}
+
+.content-section-videos .video-item-card .album .info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 22px;
+  padding: 0 10px;
+  line-height: 22px;
+  background-color: rgba(0, 0, 0, .6);
+  font-size: 12px;
+  color: #fff;
+}
+
+.content-section-videos .video-item-card .album .info .count {
+  padding-left: 16px;
+  background: url(../images/main_sprite.png) no-repeat -256px -59px;
+}
+
+.content-section-videos .video-item-card .album .cover {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .6);
+
+  transition: all 300ms ease-in;
+}
+
+.content-section-videos .video-item-card:hover .album .cover {
+  display: block;
+  animation: itemCoverAnim 300ms ease-in forwards;
+}
+
+@keyframes itemCoverAnim {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.content-section-videos .video-item-card .album .cover .icon_play {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 40px;
+  height: 40px;
+  background: url(../images/main_sprite.png) no-repeat -192px -64px;
+}
+
+.content-section-videos .video-item-card .desc {
+  margin-top: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.page-content-container .match-news-wrap {
+  display: flex;
+  height: 260px;
+  margin: 20px 0 15px;
+}
+
+.page-content-container .match-news-wrap .match-new__left {
+  width: 211px;
+  background-color: orange;
+}
+
+.page-content-container .match-news-wrap .match-new__right {
+  flex: 1;
+  overflow: hidden;
+  padding: 0 15px;
+}
+
+.match-news-wrap .match-new__right .title {
+  font-size: 24px;
+  color: #333333;
+  padding-right: 80px;
+}
+
+.match-news-wrap .match-new__right .subtitle {
+  padding-right: 160px;
+  color: #666;
+}
+
+.match-news-wrap .match-new__right .news-list .item {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.match-news-wrap .match-new__right .news-list .item .desc {
+  flex: 1;
+  padding-right: 50px;
+}
+
+.match-news-wrap .match-new__right .news-list .item .desc:hover {
+  text-decoration: underline;
+}
+
+.match-news-wrap .match-new__right .news-list .item .date {
+  font-size: 12px;
+  color: #b8b9c5;
+}
+
+.match-news-wrap .match-new__right .news-list .item .news-type-match {
+  display: inline-block;
+  width: 52px;
+  height: 23px;
+  margin-right: 12px;
+  border-radius: 10px;
+  line-height: 23px;
+  text-align: center;
+  color: #999;
+  font-size: 12px;
+  background-color: #e3e3e3;
+}
+
+.page-content-container .page-content__right {
+  width: 295px;
+}
+
+.page-content-container .content-section-new-hero {
+  margin-top: 20px;
+}
+
+.page-content-container .content-section-new-hero .album {
+  display: block;
+}
+
+.content-section-new-hero .intor {
+  height: 47px;
+  padding: 10px 15px;
+  border: 1px solid #e5e5e5;
+  border-top: none;
+  border-radius: 0 0 2px 2px;
+}
+
+.content-section-new-hero .intor .name {
+  color: #333;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.content-section-new-hero .intor .date {
+  margin-top: 5px;
+  color: #999;
+  font-size: 12px;
+}
+
+.page-content-container .content-section-hero-list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.page-content-container .content-section-hero-list .item a {
+  position: relative;
+  display: block;
+}
+
+.page-content-container .content-section-hero-list .item a .cover {
+  display: flex;
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  writing-mode: vertical-lr;
+  color: #f3c258;
+  background-color: rgba(0, 0, 0, .85);
+  transition: opacity 300ms ease;
+}
+
+.page-content-container .content-section-hero-list .item a:hover .cover {
+  opacity: 1;
+}
+
+.page-content-container .content-kpl-schedule-section {
+  margin-top: 20px;
+}
+
+.page-content-container .content-kpl-schedule-section .content-section-schedule-time {
+  width: 100%;
+  font-size: 12px;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.content-kpl-schedule-section .content-section-schedule-time thead tr {
+  background-color: #f5f5f5;
+  height: 29px;
+  line-height: 29px;
+  font-size: 14px;
+  color: #999;
+}
+
+.content-kpl-schedule-section .content-section-schedule-time tbody tr {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.content-kpl-schedule-section .content-section-schedule-time tbody td {
+  padding: 10px 0;
+}
+
+.content-kpl-schedule-section .content-section-schedule-time tbody .team {
+  margin-bottom: 5px;
+}
+
+.content-kpl-schedule-section .content-section-schedule-time tbody img {
+  width: 25px;
+  height: 25px;
+}
+
+.content-kpl-schedule-section .content-section-schedule-time td:nth-child(2),
+.content-kpl-schedule-section .content-section-schedule-time td:nth-child(4) {
+  width: 83px;
+}
+
+.content-kpl-schedule-section .content-section-schedule-time td:nth-child(3) {
+  font-size: 14px;
+  color: #f3c258;
+}
+
+.content-kpl-schedule-section .content-section-match-schedule {
+  display: block;
+  margin-top: 10px;
+}

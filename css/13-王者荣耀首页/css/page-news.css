@@ -1,0 +1,143 @@
+.page-news-container {
+  display: flex;
+  height: 342px;
+  background: url(../images/news_bg.png) no-repeat;
+}
+
+.page-news-container .banner-list {
+  display: flex;
+  width: 604px;
+  overflow: hidden;
+}
+
+.page-news-container .banner-list .banner-item {
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.page-news-container .banner-list .banner-item a {
+  display: block;
+}
+
+.page-news-container .banner-list .banner-item img {
+  width: 100%;
+}
+
+.page-news-container .news-banner-wrap .title-list {
+  display: flex;
+  height: 44px;
+  line-height: 44px;
+}
+
+.page-news-container .news-banner-wrap .title-list .title-item {
+  flex: 1;
+  text-align: center;
+}
+
+
+.news-banner-wrap .title-list .title-item a {
+  display: block;
+  color: #b1b2be;
+}
+
+.news-banner-wrap .title-list .title-item.active a,
+.news-banner-wrap .title-list .title-item a:hover {
+  color: #f3c258;
+  background-color: rgba(255, 255, 255, .15);
+}
+
+.page-news-container .news-list-wrap {
+  flex: 1;
+  overflow: hidden;
+  padding: 0 17px;
+}
+
+.page-news-container .news-list-wrap .title-list {
+  display: flex;
+  height: 48px;
+  border-bottom: 1px solid #000;
+}
+
+.page-news-container .news-list-wrap .title-list .item {
+  width: 52px;
+}
+
+.page-news-container .news-list-wrap .title-list .item a {
+  display: block;
+  height: 48px;
+  box-sizing: border-box;
+  line-height: 48px;
+  color: #b8b9c5;
+  text-align: center;
+  transition: border-bottom 200ms ease-in;
+}
+
+.page-news-container .news-list-wrap .title-list .item.active a,
+.page-news-container .news-list-wrap .title-list .item:not(.more) a:hover {
+  color: #f3c258;
+  border-bottom: 3px solid #f3c258;
+}
+
+.page-news-container .notice {
+  height: 36px;
+  line-height: 36px;
+  margin-top: 18px;
+  padding: 0 15px;
+  background: #414046;
+}
+
+.page-news-container .notice a {
+  display: block;
+  /* padding-right: 50px; */
+  font-size: 18px;
+  color: #f3c258;
+}
+
+.page-news-container .news-list {
+  margin-top: 12px;
+}
+
+.page-news-container .news-list .item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 11px;
+}
+
+.page-news-container .news-list .item .desc {
+  flex: 1;
+  color: #b8b9c5;
+
+  white-space: nowrap;
+
+}
+
+.page-news-container .news-list .item .date {
+  padding: 0 8px;
+  color: #999;
+  font-size: 12px;
+}
+
+.page-news-container .download {
+  width: 236px;
+  background-color: skyblue;
+}
+
+.page-news-container .download a {
+  display: block;
+  background: url(../images/main_sprite.png) no-repeat;
+}
+
+.page-news-container .download a.download-btn {
+  height: 128px;
+  background-position: 0 -219px;
+}
+
+.page-news-container .download a.guard-btn {
+  height: 106px;
+  background-position: 0 -350px;
+}
+
+.page-news-container .download a.experience-btn {
+  height: 108px;
+  background-position: 0 -461px;
+}
