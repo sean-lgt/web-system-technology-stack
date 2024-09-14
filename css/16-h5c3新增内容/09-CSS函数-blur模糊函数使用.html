@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS函数-blur函数使用</title>
+  <style>
+    /* img {
+      filter: blur(5px);
+    } */
+
+    .box {
+      display: inline-block;
+      position: relative;
+      /* filter: blur(5px); */
+    }
+
+    .cover {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <img src="https://cdn.pixabay.com/photo/2024/09/02/15/06/sunset-9017041_640.jpg" alt="">
+    <div class="cover"></div>
+  </div>
+</body>
+
+</html>

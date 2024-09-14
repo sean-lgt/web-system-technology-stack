@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>行盒中的多种行内元素</title>
+  <style>
+    .box {
+      background-color: orange;
+    }
+
+    .box img {
+      width: 200px;
+    }
+
+    .box .small {
+      display: inline-block;
+      width: 100px;
+      height: 200px;
+      background-color: #f00;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    我是普通的文本, 323fdafdafxxxx322
+    <img src="https://cdn.pixabay.com/photo/2024/09/02/15/06/sunset-9017041_640.jpg" alt="">
+    <span class="small"></span>
+  </div>
+</body>
+
+</html>
