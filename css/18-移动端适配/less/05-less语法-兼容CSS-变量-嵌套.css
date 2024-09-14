@@ -1,0 +1,28 @@
+.box .pel {
+  color: #a40011;
+  font-size: 14px;
+}
+.box h1 .keyword {
+  color: #a40011;
+  font-size: 18px;
+}
+.box p a.link {
+  color: #a40011;
+  font-size: 12px;
+  background-color: #0f0;
+}
+.box p a.link:hover {
+  color: #00f;
+}
+.list .item {
+  font-size: 20px;
+}
+.list .item:hover {
+  color: #a40011;
+}
+.list .item:nth-child(1) {
+  color: orange;
+}
+.list .item:nth-child(2) {
+  color: #00f;
+}

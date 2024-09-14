@@ -1,0 +1,25 @@
+.nowrap_ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.box_size {
+  width: 100px;
+  height: 100px;
+}
+.box1 {
+  width: 100px;
+  background-color: #f00;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  border: 5px solid purple;
+}
+.box2 {
+  width: 150px;
+  background-color: #0f0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  border: 10px solid orange;
+}
