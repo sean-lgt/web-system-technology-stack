@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <!-- 1.编写位置一：编写在html内部（了解） -->
+    <a href="#" onclick="alert('hello')">弹出hello</a>
+    <a href="javascript:alert('hello')">弹出hello</a>
+
+    <!-- 2.编写位置二：编写在script元素之内 -->
+    <a href="#" class="google">Google 一下</a>
+
+    <script>
+      const googleEl = document.querySelector('.google')
+      googleEl.onclick = function () {
+        alert('Google 一下')
+      }
+    </script>
+
+    <!-- 3.编写位置三：独立的js文件中 -->
+    <a href="#" class="bing">Bing 一下</a>
+    <script src="./js/bing.js"></script>
+  </body>
+</html>
