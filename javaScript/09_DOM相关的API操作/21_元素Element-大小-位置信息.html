@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 100px;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        padding: 20px;
+        border: 10px solid red;
+        /* box-sizing: border-box; */
+        background-color: orange;
+
+        overflow: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      你去过国内最美的地方是哪#
+      我去过国内最美的地方是新疆喀纳斯。喀纳斯是一个美丽而神秘的地方，这里群山环抱，森林密布，湖水清澈，风景奇特。为国家级5A级景区，国家地质公园，国家森林公园。
+    </div>
+    <script>
+      var boxEl = document.querySelector('.box')
+
+      // 获取样式（局限性很强）
+      var boxStyle = getComputedStyle(boxEl)
+      console.log('🚀【boxStyle】', boxStyle.width, boxStyle.height)
+
+      // 获取更多信息
+      console.log('🚀【clientWidth】', boxEl.clientWidth)
+      console.log('🚀【clientHeight】', boxEl.clientHeight)
+
+      console.log('🚀【clientLeft】', boxEl.clientLeft)
+      console.log('🚀【clientTop】', boxEl.clientTop)
+
+      console.log('🚀【offsetWidth】', boxEl.offsetWidth)
+      console.log('🚀【offsetHeight】', boxEl.offsetHeight)
+
+      console.log('🚀【offsetLeft】', boxEl.offsetLeft)
+      console.log('🚀【offsetTop】', boxEl.offsetTop)
+
+      console.log('🚀【scrollHeight】', boxEl.scrollHeight)
+      console.log('🚀【scrollTop】', boxEl.scrollTop)
+
+      // window 对象
+      window.onclick = function () {
+        console.log('🚀【scrollTop ~ 】', boxEl.scrollTop)
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <input name="account" type="text" />
+      <input name="password" type="password" />
+      <input name="hobbies" type="checkbox" checked />
+      <select name="fruits">
+        <option value="apple">苹果</option>
+        <option value="orange">橘子</option>
+      </select>
+    </form>
+
+    <script>
+      // 获取 form
+      var formEl = document.forms[0]
+
+      // 获取form中的元素
+      var inputEl = formEl.elements.account
+      setTimeout(() => {
+        console.log(inputEl.value)
+      }, 5000)
+    </script>
+  </body>
+</html>
