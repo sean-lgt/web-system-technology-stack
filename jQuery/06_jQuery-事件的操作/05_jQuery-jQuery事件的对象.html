@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box">
+      div
+      <span class="content">span</span>
+    </div>
+
+    <script src="../libs/jquery-3.6.0.js"></script>
+    <script>
+      // 1.监听文档完全解析完成
+      $(function () {
+        // 1.获取原生的事件对象
+        // var divEl = document.querySelector('.box')
+        // divEl.addEventListener('click', function(event) {
+        //   console.log(event)
+        // })
+
+        // 2.获取jQuery的事件对象
+        $('.box').click(function ($event) {
+          console.log($event) // 是jQuery的事件对象
+          console.log($event.originalEvent) // 拿到原生的事件对象
+        })
+      })
+    </script>
+  </body>
+</html>

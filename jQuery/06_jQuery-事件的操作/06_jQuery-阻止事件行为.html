@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box">
+      div
+      <span class="content">span</span>
+    </div>
+
+    <a href="https://www.jd.com">京东商城</a>
+
+    <script src="../libs/jquery-3.6.0.js"></script>
+    <script>
+      // 1.监听文档完全解析完成
+      $(function () {
+        $('a').click(function ($event) {
+          $event.preventDefault() // 阻止a元素的默认行为
+          console.log('点击a元素')
+        })
+
+        $('.content').click(function ($event) {
+          $event.stopPropagation() // 阻止事件的冒泡
+          console.log('span')
+        })
+
+        $('.box').on('click', function () {
+          console.log('div')
+        })
+        $('body').on('click', function () {
+          console.log('body')
+        })
+      })
+    </script>
+  </body>
+</html>
