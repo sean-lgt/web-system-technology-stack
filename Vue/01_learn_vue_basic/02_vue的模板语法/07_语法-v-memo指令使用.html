@@ -1,0 +1,44 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- v-memo 是一种高效的优化组件重渲染的指令。 它可以阻止组件元素在没有必要的情况下进行重新渲染，从而提高应用程序的性能 -->
+      <div v-memo="[name, age]">
+        <h2>姓名: {{ name }}</h2>
+        <h2>年龄: {{ age }}</h2>
+        <h2>身高: {{ height }}</h2>
+      </div>
+      <button @click="updateInfo">改变信息</button>
+    </div>
+
+    <script src="../libs/vue@3.5.13.js"></script>
+    <script>
+      // 1.创建app
+      const app = Vue.createApp({
+        // data: option api
+        data: function () {
+          return {
+            name: 'why',
+            age: 18,
+            height: 1.88,
+          }
+        },
+
+        methods: {
+          updateInfo: function () {
+            // this.name = "kobe"
+            this.age = 20
+          },
+        },
+      })
+
+      // 2.挂载app
+      app.mount('#app')
+    </script>
+  </body>
+</html>

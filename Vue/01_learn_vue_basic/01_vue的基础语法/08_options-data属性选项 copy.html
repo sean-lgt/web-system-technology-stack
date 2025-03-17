@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <h2>当前计数: {{counter}}</h2>
+      <button @click="increment">+1</button>
+    </div>
+
+    <script src="../libs/vue@3.5.13.js"></script>
+    <script>
+      console.log(this)
+
+      const app = Vue.createApp({
+        // data: option api
+        data: function () {
+          return {
+            message: 'Hello Data',
+          }
+        },
+        // methods: option api
+        methods: {
+          changeMessage: function () {
+            this.message = '你好, 师姐!'
+          },
+        },
+      })
+
+      app.mount('#app')
+    </script>
+  </body>
+</html>
