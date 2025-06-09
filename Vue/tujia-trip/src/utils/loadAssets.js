@@ -6,6 +6,6 @@ const imageModules = import.meta.glob('@/assets/img/*/*.{png,jpg,jpeg,svg}', {
 
 export const getAssetURL = (image) => {
   const path = `/src/assets/img/${image}`
-  console.log('path', imageModules)
+  // console.log('path', imageModules)
   return imageModules[path]
 }
