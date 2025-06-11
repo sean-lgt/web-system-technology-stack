@@ -26,6 +26,10 @@ const router = createRouter({
     {
       path: '/city',
       component: () => import('@/views/city/index.vue')
+    },
+    {
+      path: '/detail/:id',
+      component: () => import('@/views/detail/index.vue')
     }
   ]
 })
