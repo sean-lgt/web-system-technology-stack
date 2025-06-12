@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <!-- babel -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+      /*
+      this的四种绑定规则:
+        1.默认绑定 独立执行 foo()
+        2.隐式绑定 被一个对象执行 obj.foo() -> obj
+        3.显式绑定: call/apply/bind foo.call("aaa") -> String("aaa")
+        4.new绑定: new Foo() -> 创建一个新对象, 并且赋值给this
+    */
+
+      class App extends React.Component {
+        // 组件数据
+        constructor() {
+          super()
+          this.state = {
+            movies: ['星际穿越', '盗梦空间', '大话西游', '流浪地球'],
+            currentIndex: 0,
+          }
+        }
+
+        itemClick(index) {
+          this.setState({ currentIndex: index })
+        }
+
+        // 渲染内容  render方法
+        render() {
+          const { movies, currentIndex } = this.state
+
+          const itemHandle = (item, index) => {
+            return (
+              <li
+                className={currentIndex === index ? 'active' : ''}
+                key={item}
+                onClick={() => this.itemClick(index)}
+              >
+                {item}
+              </li>
+            )
+          }
+
+          return (
+            <div>
+              <ul>{movies.map(itemHandle)}</ul>
+            </div>
+          )
+        }
+      }
+
+      // 将组件渲染到界面上
+      const root = ReactDOM.createRoot(document.querySelector('#root'))
+      // App根组件
+      root.render(<App />)
+    </script>
+  </body>
+</html>

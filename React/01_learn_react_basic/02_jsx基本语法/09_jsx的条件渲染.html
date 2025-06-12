@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <!-- babel -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+      class App extends React.Component {
+        // 组件数据
+        constructor() {
+          super()
+          this.state = {
+            message: 'Hello World',
+
+            isReady: false,
+
+            friend: undefined,
+          }
+        }
+
+        // 渲染内容  render方法
+        render() {
+          const { isReady, friend } = this.state
+          // 1.条件判断方式一: 使用if进行条件判断
+          let showElement = null
+          if (isReady) {
+            showElement = <h2>准备开始比赛吧</h2>
+          } else {
+            showElement = <h1>请提前做好准备!</h1>
+          }
+
+          return (
+            <div>
+              {/* 1.方式一: 根据条件给变量赋值不同的内容 */}
+              <div>{showElement}</div>
+
+              {/* 2.方式二: 三元运算符 */}
+              <div>
+                {isReady ? <button>开始战斗!</button> : <h3>赶紧准备</h3>}
+              </div>
+
+              {/* 3.方式三: &&逻辑与运算 */}
+              {/* 场景: 当某一个值, 有可能为undefined时, 使用&&进行条件判断 */}
+              <div>
+                {friend && <div>{friend.name + ' ' + friend.desc}</div>}
+              </div>
+            </div>
+          )
+        }
+      }
+
+      // 将组件渲染到界面上
+      const root = ReactDOM.createRoot(document.querySelector('#root'))
+      // App根组件
+      root.render(<App />)
+    </script>
+  </body>
+</html>

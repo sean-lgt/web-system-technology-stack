@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <!-- babel -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+      // const obj = {
+      //   name: "obj",
+      //   foo: function() {
+      //     console.log("foo:", this)
+      //   }
+      // }
+
+      // // obj.foo()
+
+      // const config = {
+      //   onClick: obj.foo.bind(obj)
+      // }
+
+      // const click = config.onClick
+      // click()
+
+      /*
+      this的四种绑定规则:
+        1.默认绑定 独立执行 foo()
+        2.隐式绑定 被一个对象执行 obj.foo() -> obj
+        3.显式绑定: call/apply/bind foo.call("aaa") -> String("aaa")
+        4.new绑定: new Foo() -> 创建一个新对象, 并且赋值给this
+    */
+
+      class App extends React.Component {
+        // class fields
+        name = 'App'
+
+        // 组件数据
+        constructor() {
+          super()
+          this.state = {
+            message: 'Hello World',
+            counter: 100,
+          }
+        }
+
+        btnClick(event, name, age) {
+          console.log('btnClick:', event, this)
+          console.log('name, age:', name, age)
+        }
+
+        // 渲染内容  render方法
+        render() {
+          const { message } = this.state
+
+          return (
+            <div>
+              {/* 1.event参数的传递 */}
+              <button onClick={this.btnClick.bind(this)}>按钮1</button>
+              <button onClick={(event) => this.btnClick(event)}>按钮2</button>
+
+              {/* 2.额外的参数传递 */}
+              <button onClick={this.btnClick.bind(this, 'kobe', 30)}>
+                按钮3(不推荐)
+              </button>
+
+              <button onClick={(event) => this.btnClick(event, 'why', 18)}>
+                按钮4
+              </button>
+            </div>
+          )
+        }
+      }
+
+      // 将组件渲染到界面上
+      const root = ReactDOM.createRoot(document.querySelector('#root'))
+      // App根组件
+      root.render(<App />)
+    </script>
+  </body>
+</html>
