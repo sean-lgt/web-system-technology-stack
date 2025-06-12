@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- 添加依赖 -->
+    <!-- 依赖三个包 -->
+    <!-- CDN引入 -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <!-- babel -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <!-- <script type="text/babel">
+      const root = ReactDOM.createRoot(document.querySelector('#root'))
+
+      // 将文本定义成变量
+      let message = 'hello world'
+
+      // 监听按钮的点击
+      function btnClick() {
+        message = 'hello react'
+
+        rootRender()
+      }
+
+      // 渲染
+      function rootRender() {
+        root.render(
+          <div>
+            <h2>{message}</h2>
+            <button onClick={btnClick}>修改文本</button>
+          </div>
+        )
+      }
+      rootRender()
+    </script> -->
+
+    <script type="text/babel">
+      class App extends React.Component {
+        // 组件数据
+        constructor() {
+          super()
+          this.state = {
+            message: 'hello world',
+            name: 'test',
+            age: 18,
+          }
+
+          // 对需要绑定的方法，需要提前绑定好this
+          this.btnClick = this.btnClick.bind(this)
+        }
+
+        // 组件方法（实例方法）
+        btnClick() {
+          // 内部完成两件事 修改state数据 自动执行render渲染函数
+          this.setState({
+            message: 'hello react',
+          })
+        }
+
+        // 渲染内容  render方法
+        render() {
+          return (
+            <div>
+              <h2>{this.state.message}</h2>
+              <button onClick={this.btnClick}>修改文本</button>
+            </div>
+          )
+        }
+      }
+
+      // 将组件渲染到界面上
+      const root = ReactDOM.createRoot(document.querySelector('#root'))
+      // App根组件
+      root.render(<App />)
+    </script>
+  </body>
+</html>
