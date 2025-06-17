@@ -18,5 +18,6 @@ module.exports = {
     ],
     'no-unused-vars': 'off', // 禁用 no-unused-vars 规则
     'react/prop-types': 'off', // 禁用 prop-types 校验
+    'react/display-name': 'off', // 禁用 display-name 校验
   },
 }
