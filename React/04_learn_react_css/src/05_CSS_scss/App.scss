@@ -1,0 +1,17 @@
+// 定义变量
+$primary-color: #61dafb;
+$text-color: #282c34;
+
+.section {
+  border: 1px solid $primary-color;
+
+  .title {
+    font-size: 30px;
+    color: $text-color;
+  }
+
+  .content {
+    font-size: 20px;
+    color: $primary-color;
+  }
+}
