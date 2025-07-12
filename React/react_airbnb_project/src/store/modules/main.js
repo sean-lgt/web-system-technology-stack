@@ -4,8 +4,8 @@ const mainSlice = createSlice({
   name: 'main',
   initialState: {
     headerConfig: {
-      topSearch: true,
-      topFixed: true,
+      isFixed: false,
+      isHome: false,
     },
   },
   reducers: {

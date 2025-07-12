@@ -9,6 +9,7 @@ import HomeSectionV3 from './components/home-section-v3/index'
 import { HomeWrapper } from './style'
 
 import { fetchHomeDataAction } from '@/store/modules/home'
+import { changeHeaderConfigAction } from '@/store/modules/main'
 
 import { isEmptyO } from '@/utils/index'
 
@@ -28,6 +29,7 @@ const Home = memo(() => {
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(fetchHomeDataAction("xxxx"))
+    dispatch(changeHeaderConfigAction({ isFixed: true, isHome: true }))
   }, [dispatch])
 
   return (

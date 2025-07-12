@@ -4,18 +4,18 @@ import HousePicture from './components/house-picture'
 
 import { DetailWrapper } from './style'
 
-import { changeHeaderConfigAction } from '@/store/modules/detail'
+import { changeHeaderConfigAction } from '@/store/modules/main'
 
 const Detail = memo(() => {
   const { detailInfos } = useSelector((state) => ({
     detailInfos: state.detail.detailInfos
   }))
-  console.log(">>>>>>>",detailInfos)
+ 
   const { picture_urls } = detailInfos
   const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(changeHeaderConfigAction({ topSearch: false, topFixed: false }))
+    dispatch(changeHeaderConfigAction({ isFixed: false, isHome: false }))
   }, [dispatch])
 
   return (
