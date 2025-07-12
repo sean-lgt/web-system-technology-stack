@@ -11,7 +11,7 @@ const HomeLongfor = memo((props) => {
   const { infoData} = props
 
   return (
-    <LongforItem>
+    <LongforWrapper>
       <SectionHeader title={infoData.title} subtitle={ infoData.subtitle}></SectionHeader>
       <div className="longfor-list">
         <ScrollView>
@@ -24,7 +24,7 @@ const HomeLongfor = memo((props) => {
           }
         </ScrollView>
      </div>
-    </LongforItem>
+    </LongforWrapper>
   )
 })
 

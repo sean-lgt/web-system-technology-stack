@@ -15,21 +15,21 @@ export const fetchHomeDataAction = createAsyncThunk(
     getHomeGoodPriceData().then((res) => {
       dispatch(changeGoodPriceInfoAction(res))
     })
-    // getHomeHighScoreData().then((res) => {
-    //   dispatch(changeHighScoreInfoAction(res))
-    // })
-    // getHomeDiscountData().then((res) => {
-    //   dispatch(changeDiscountInfoAction(res))
-    // })
-    // getHomeHotRecommendData().then((res) => {
-    //   dispatch(changeRecommendInfoAction(res))
-    // })
-    // getHomeLongforData().then((res) => {
-    //   dispatch(changeLongforInfoAction(res))
-    // })
-    // getHomePlusData().then((res) => {
-    //   dispatch(changePlusInfoAction(res))
-    // })
+    getHomeHighScoreData().then((res) => {
+      dispatch(changeHighScoreInfoAction(res))
+    })
+    getHomeDiscountData().then((res) => {
+      dispatch(changeDiscountInfoAction(res))
+    })
+    getHomeHotRecommendData().then((res) => {
+      dispatch(changeRecommendInfoAction(res))
+    })
+    getHomeLongforData().then((res) => {
+      dispatch(changeLongforInfoAction(res))
+    })
+    getHomePlusData().then((res) => {
+      dispatch(changePlusInfoAction(res))
+    })
   }
 )
 

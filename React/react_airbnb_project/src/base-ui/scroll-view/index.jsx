@@ -1,6 +1,6 @@
 import React, { memo, useEffect, useState, useRef } from "react";
-import IconArrowLeft from "@/assets/svg/icon_arrow_left";
-import IconArrowRight from "@/assets/svg/icon_arrow_right";
+import IconArrowLeft from "@/assets/svg/icon-arrow-left";
+import IconArrowRight from "@/assets/svg/icon-arrow-right";
 import { ViewWrapper } from "./style";
 
 const ScrollView = memo((props) => {
@@ -24,7 +24,7 @@ const ScrollView = memo((props) => {
   function controlClickHandle (isRight) {
     const newIndex = isRight ? posIndex + 1 : posIndex - 1
     const newEl = scrollContentRef.current.children[newIndex]
-    const newOffsetLeft = newEl.newOffsetLeft
+    const newOffsetLeft = newEl.offsetLeft
     scrollContentRef.current.style.transform = `translate(-${newOffsetLeft}px)`
     setPosIndex(newIndex)
     // 是否继续显示右侧的按钮
