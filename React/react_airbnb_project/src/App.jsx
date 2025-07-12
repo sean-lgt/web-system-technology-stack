@@ -6,7 +6,11 @@ import AppFooter from '@/components/app-footer'
 
 import routes from './router/index'
 
+import { useScrollTop } from '@/hooks/index'
+
 const App = memo(() => {
+  useScrollTop() // 回到顶部
+  
   return (
     <div className='app'>
       <AppHeader/>

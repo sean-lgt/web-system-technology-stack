@@ -18,6 +18,7 @@ const EntirePagination = memo(() => {
   const end = (currentPage + 1) * 20
 
   const handlePageChange = (event, newPage) => {
+    window.scrollTo(0, 0) // 滚动到顶部
     dispatch(fetchEntireDataAction(newPage))
   }
 
