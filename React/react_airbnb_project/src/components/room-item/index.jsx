@@ -1,15 +1,27 @@
 import React, { memo } from "react";
 import PropTypes from 'prop-types'
+import { useNavigate } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
 
 import Rating from '@mui/material/Rating';
 
 import { RoomItemWrapper } from './style'
 
+import { changeDetailInfosAction } from '@/store/modules/detail'
+
 const RoomItem = memo((props) => {
   const { itemData, itemWidth = "25%" } = props
 
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
+
+  function itemClick() {
+    navigate("/detail")
+    dispatch(changeDetailInfosAction(itemData))
+  }
+
   return (
-    <RoomItemWrapper verifyColor={ itemData?.verify_info?.text_color || "#39576a"} itemWidth={itemWidth} >
+    <RoomItemWrapper verifyColor={ itemData?.verify_info?.text_color || "#39576a"} itemWidth={itemWidth} onClick={itemClick}>
       <div className='inner'>
         <div className='cover'>
           <img src={itemData.picture_url} alt="" />
